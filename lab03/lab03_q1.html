@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="Lab.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <img src="Karina.jpg" width="200" height="200" >
+                </td>
+                <td>
+                    <h2>Personal Information:</h2>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    <textarea rows="8" cols="30" placeholder="profile" id="profile"></textarea>
+                </td>
+                <td><label for="name">Name:</label><br>
+                    <input type="text" id="name" placeholder="John Doe">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label><br>
+                <input type="range" id="age"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label><br>
+                <input type="email" id="email" placeholder="myEmail"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone:</label><br>
+                <input type="tel" id="phone" placeholder="088-888-8888"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="street">Address:</label><br>
+                    <hr class="short-hr"><br>
+                    <input type="text" id="street" placeholder="Maple street"><br>
+                    <input type="text" id="city" placeholder="California"><br>
+                    <select name="country" id="country">
+                        <option value="">Select a country</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="street">Education:</label><br>
+                    <hr class="short-hr"><br>
+                    <label for="street">University:</label><br>
+                    <input type="text" id="university" placeholder="KMITL"><br>
+                    <label for="street">Degree:</label><br>
+                    <input type="text" id="degree" placeholder="SE"><br>
+                    <label for="street">Year of Graduation:</label><br>
+                    <input type="date" name="" id="graduationYear">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="street">Contact:</label><br>
+                    <hr class="short-hr"><br>
+                    <label for="street">Reference:</label><br>
+                    <textarea name="" id="ref"></textarea><br>
+                    <label for="street">Favorite Color:</label><br>
+                    <input type="color" name="" id="favColour">
+                </td>
+                <td>
+                    <label for="street">Skills & Experience:</label><br>
+                    <hr class="short-hr"><br>
+                    <label for="street">Skills:</label><br>
+                    <textarea name="" id="skills"></textarea><br>
+                    <label for="street">Experience:</label><br>
+                    <textarea name="" id="experience"></textarea><br>
+                    <button onclick="displayResume()">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+.main_container{
+    display: flex;
+    align-items: center;
+    width: 1240px;
+    height: 1754px;
+    background-color:  lightcyan;
+    font-family: 'Roboto', sans-serif;
+    margin: 50px;
+}
+
+.left_container{
+    width: 500px;
+    height: 1754px;
+    background-color: aquamarine;
+}
+
+.right_container{
+    width: 740px;
+    height: 1754px;
+    background-color: rgb(217, 214, 214);
+}
+
+.right_container p {
+    color: rgb(93, 98, 98);
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+}
+
+.image img{
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; /* This makes the image round */
+}
+
+.s_pic {
+    width: 20px; 
+    height: 20px; 
+}
+
+.image, .first_para{
+    margin-top: 40px;
+}
+
+.NAME_AND_SURNAME , .image ,.proflie ,.skills ,.languages, .hobbies, .first_para, .Profess_ex, .ex, .Edu, .edu_in{
+    margin-bottom: 50px;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.NAME_AND_SURNAME , .image ,.proflie ,.skills ,.languages, .hobbies h2{
+    text-size-adjust: 50px;
+}
+
+.left_container, .right_container p {
+    font-size: 20px; /* Smaller font size on smaller screens */
+}
+
+.left_container hr {
+    border: 0;                          /* Removes default border */
+    height: 2px;                        /* Sets the thickness of the line */
+    background-color: #333;             /* Sets the color of the line */
+    margin: 20px 0;                     /* Adds vertical spacing around the line */
+}
+
+.right_container hr {
+    border: 0;                          /* Removes default border */
+    height: 2px;                        /* Sets the thickness of the line */
+    background-color: #333;             /* Sets the color of the line */
+    margin: 20px 0;                     /* Adds vertical spacing around the line */
+}
+
+.tab1 {
+    tab-size: 8;
+}
+
+.ex {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.Profess_ex {
+    margin-bottom: 10px;
+}
+
+.in_ex {
+    padding-left: 30px;
+}
+
+.Edu{
+    margin-bottom: 10px;
+}
+
+.edu_in{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.edu_in_in{
+    padding-left: 70px;
+}
+
+b {
+    font-weight: bold;
+    color: black;
+}
+

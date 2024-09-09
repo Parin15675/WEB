@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Shopping List</h2>
+    <table border="1">
+        <thead>
+            <tr style="background-color: bisque;">
+                <th>Item Name</th>
+                <th>Amount</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody class="result">
+
+        </tbody>
+    </table>
+    <br>
+    <button onclick="reset()">Reset</button>
+    <h2>Add Item</h2>
+    <p>Name: <input type="text" id="name"></p>
+    <p>Amount: <input type="text" id="amount"></p>
+    <p>Price: <input type="text" id="price"></p>
+    <button onClick="add()">Add</button>
+    <button onClick="clearFields()">Clear</button>
+</body>
+<script>
+
+    function add(){
+        const nameElement = document.getElementById("name").value;
+        const amountElement = document.getElementById("amount").value;
+        const priceElement = document.getElementById("price").value;
+        const table = document.getElementsByClassName("result")[0];
+        const newRow = `<tr><td>${nameElement}</td><td>${amountElement}</td><td>${priceElement}</td></tr>`;
+        table.innerHTML += newRow;   
+        
+    }
+
+    function clearFields(){
+        // Directly clear input fields
+        document.getElementById("name").value = '';
+        document.getElementById("amount").value = '';
+        document.getElementById("price").value = '';
+    }
+
+    function reset() {
+        const table = document.getElementsByClassName("result")[0];
+        table.innerHTML = ''; 
+    }
+
+</script>
+</html>

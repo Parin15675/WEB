@@ -1,0 +1,88 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 4vw; /* Base font size relative to viewport width */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    background-color: aqua;
+    margin: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* Specific styles based on class */
+.blue {
+    background-color: #3498db;
+    flex: 1 1 35%;
+}
+
+.red {
+    background-color: #e74c3c;
+    flex: 1 1 65%;
+}
+
+.green {
+    background-color: #2ecc71;
+    flex: 1 1 100%;
+}
+
+h5 {
+    margin: 10px 0 5px;
+}
+
+img {
+    width: 50vw; /* Responsive image width based on viewport width */
+    max-width: 100%; /* Ensure the image doesn’t exceed the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blue, .red, .green {
+        flex: 1 1 100%;
+    }
+
+    img {
+        width: 70vw; /* Increase image size for smaller screens */
+    }
+}
+
+@media screen and (min-width: 300px) {
+    body {
+        font-size: 20PX; /* Increase font size for larger screens */
+    }
+
+    img {
+        width: 30vw; /* Adjust image size for larger screens */
+    }
+} 
+
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 200PX; /* Further adjust font size for very large screens */
+    }
+
+    img {
+        width: 20vw; /* Further adjust image size for very large screens */
+    }
+}

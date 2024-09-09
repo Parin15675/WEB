@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="box" style="border: 1px solid black; width: 500px; margin: auto; text-align: center;">
+        <p><strong>Calculator</strong></p>
+        <p>Name-surname <input type="text" placeholder="Tim Stones" id="name"></p>
+        <p>Gender <input type="radio">male <input type="radio"> Female</p>
+        <p>Weight <input type="text" id="w"> kg</p>
+        <p>Height <input type="text" id="h"> m</p>
+        <button id="button" onclick="cal()">Calculate</button>
+    </div>
+    <table border="1" style="text-align: center; margin: auto;">
+        <tr>
+            <td>result</td>
+            <td>Interpretation</td>
+        </tr>
+        <tr class="Underweight">
+            <td>Below 18.5</td>
+            <td>Underweight</td>
+        </tr>
+        <tr class="Normal">
+            <td>18.5 - 24.9</td>
+            <td>Normal</td>
+        </tr>
+        <tr class="Overweight">
+            <td>25.0 - 29.9</td>
+            <td>Overweight</td>
+        </tr>
+        <tr class="Obese">
+            <td>30.5 or greater</td>
+            <td>Obese</td>
+        </tr>
+    </table>
+    <h1 class="result" style="text-align: center;"></h1>
+</body>
+<script>
+
+    function reset(){
+            document.getElementsByClassName("Underweight")[0].style.backgroundColor = "white";
+            document.getElementsByClassName("Normal")[0].style.backgroundColor = "white";
+            document.getElementsByClassName("Overweight")[0].style.backgroundColor = "white";
+            document.getElementsByClassName("Obese")[0].style.backgroundColor = "white";
+    }
+
+
+    function cal(){
+        reset()
+
+        var weight = parseFloat(document.getElementById("w").value);
+        var height = parseFloat(document.getElementById('h').value);
+        var name = document.getElementById('name').value;
+        var result = weight/(height*height);
+
+        if (result < 18.5) {
+            lnterpretation = "Underweight";
+            document.getElementsByClassName("Underweight")[0].style.backgroundColor = "yellow";
+        } else if (result >= 18.5 && result <= 24.9) {
+            lnterpretation = "Normal";
+            document.getElementsByClassName("Normal")[0].style.backgroundColor = "yellow";
+        } else if (result >= 25.0 && result <= 29.9) {
+            lnterpretation = "Overweight";
+            document.getElementsByClassName("Overweight")[0].style.backgroundColor = "yellow";
+        } else if (result >= 30) {
+            lnterpretation = "Obese";
+            document.getElementsByClassName("Obese")[0].style.backgroundColor = "yellow";
+        }
+
+        document.querySelector('.result').innerHTML = "<p>result of " + name + " is " + result.toFixed(2) + "</p>";
+    }
+</script>
+</html>

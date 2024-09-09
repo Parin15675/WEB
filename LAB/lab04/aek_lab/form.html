@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="Lab.js"></script>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; width: 1500px ; background-color: aqua; margin: auto;">
+
+        <div class="blue box" style="width: 35%">
+            <img src="https://cdn1.unitedinfocus.com/uploads/14/2024/02/GettyImages-2010375051-750x513.jpg"
+                style="width: 500px;">
+            <h5>Profile: </h5>
+            <textarea id="profile" cols="20" rows="10"></textarea>
+            <h5>Address: </h5>
+            <input type="text" id="street" placeholder="Maple Street">
+            <input type="text" id="city" placeholder="California">
+            <h5>Contacts: </h5>
+            <h5>Reference: </h5>
+            <textarea id="ref" cols="20" rows="10"></textarea>
+            <h5>Favorite Colour: </h5>
+            <input type="color" id="favColour"></type>
+            <select id="country"></select>
+
+        </div>
+        <div>
+            <div class="red box">
+                <p>Personal Information:</p>
+                <h5>Name: </h5>
+                <input type="text" id="name" placeholder="John Doe">
+                <h5>Age: </h5>
+                <input type="range" id="age">
+                <span id="ageValue">0</span>
+                <h5>Email: </h5>
+                <input type="email" id="email" placeholder="myEmail@gmail.com">
+                <h5>Phone: </h5>
+                <input type="tel" id="phone" placeholder="092-345-6789">
+            </div>
+            <div class="green box">
+                <h5>Education: </h5>
+                <h5>Degree: </h5>
+                <input type="text" id="degree" placeholder="Software Engineering">
+                <h5>Year of Graduation: </h5>
+                <input type="text" id="graduationYear" placeholder="mm/dd/yyyy">
+                <h5>University: </h5>
+                <input type="text" id="university" placeholder="KMITL">
+            </div>
+            <div class="green box">
+                <h5>Skills & Experience: </h5>
+                <h5>Skills: </h5>
+                <textarea id="skills" cols="20" rows="10"></textarea>
+                <h5>Experience: </h5>
+                <textarea id="experience" cols="20" rows="10"></textarea><br><br>
+                <button type="submit" value="Submit" onclick="displayResume()">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
